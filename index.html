@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Resume Builder</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Welcome Screen -->
+        <section id="welcome-screen">
+            <h1>Welcome to the Dynamic Resume Builder</h1>
+            <button id="start-btn">Create Resume</button>
+        </section>
+
+        <!-- Resume Form -->
+        <section id="resume-form" class="hidden">
+            <h2>Build Your Resume</h2>
+            <form id="form">
+                <!-- Personal Information -->
+                <fieldset>
+                    <legend>Profile info</legend>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="field">Field:</label>
+                    <input type="text" id="field" name="field" required>
+
+                    <!-- upload profile picture -->
+                    <div class="upload-picture">
+                        <label for="upload">Upload Your Picture:</label>
+                        <input type="file" id="upload" accept="image/*">
+                        <img id="profile-picture" alt="Profile Picture" />
+                    </div>
+                </fieldset>
+
+                <!-- Education -->
+                <fieldset>
+                    <legend>Education</legend>
+                    <label for="institution">Institution:</label>
+                    <input type="text" id="institution" name="institution" required>
+                    <label for="degree">Degree:</label>
+                    <input type="text" id="degree" name="degree" required>
+                    <label for="grad-year">Graduation Year:</label>
+                    <input type="number" id="grad-year" name="grad-year" required>
+                </fieldset>
+
+                <!-- Work Experience -->
+                <fieldset>
+                    <legend>Work Experience</legend>
+                    <label for="company">Company:</label>
+                    <input type="text" id="company" name="company" required>
+                    <label for="role">Role:</label>
+                    <input type="text" id="role" name="role" required>
+                    <label for="experience">Description:</label>
+                    <textarea id="experience" name="experience" required></textarea>
+                </fieldset>
+                
+
+                <!-- Skills -->
+                <fieldset>
+                    <legend>Skills</legend>
+                    <div id="skills-container">
+                        <div class="skill-group">
+                            <label for="skill">Skill:</label>
+                            <input type="text" class="skill-input" required>
+                
+                            <label for="proficiency">Proficiency (%):</label>
+                            <input type="number" class="proficiency-input" min="0" max="100" placeholder="e.g., 90" required>
+                        </div>
+                    </div>
+                </fieldset>
+                <button type="button" id="add-skill-btn">Add another skill</button>
+                
+
+                
+
+                <!--Contact Info-->
+                <fieldset>
+                    <legend>Contact Info</legend>
+                    <div id="contact">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="contact_no">Contact No:</label>
+                    <input type="text" id="contact_no" name="contact_no" required>
+                    <label for="address">Address:</label>
+                    <input type="text" id="address" name="address" required>
+                    </div>
+                </fieldset>
+                <button type="submit" id="generate-resume">Generate Resume</button>
+            </form>
+        </section>
+
+        <!-- Generated Resume -->
+        <section id="resume-output" class="hidden">
+            <div id="resume-content"></div>
+            <button id="edit-btn">Edit Resume</button>
+            <button id="download-pdf-btn">Download as PDF</button>
+            <button id="generate-link-btn">Generate Sharable Link</button>
+        </section>
+    </div>
+
+    <script src="main.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+
+
+</body>
+</html>

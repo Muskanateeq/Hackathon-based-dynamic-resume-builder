@@ -1,0 +1,431 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #24262c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 60px 0 60px 0;
+    height: 100vh;
+}
+/* <button id="toggleskillsbtn" style="position: absolute; right: 10px; bottom: 30px;">Hide Skills</button> */
+
+.container {
+    max-width: 800px;
+    width: 100%;
+    padding: 20px;
+    background-color: #1f1f38;
+    border-radius: 8px;
+    box-shadow: 0 0 10px bisque;
+    text-align: center;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.hidden {
+    display: none;
+}
+
+/* #welcome-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+} */
+
+#welcome-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh;
+    background-image: url('https://images.unsplash.com/photo-1614624532983-4ce03382d63d?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-position: center;
+}
+
+#welcome-screen h1 {
+    margin-left: 10px;
+    color: black;
+    font-weight: bold;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 3rem;
+    text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.5);
+    text-transform: uppercase;
+    line-height: 1.1;
+    letter-spacing: 0.1em;
+    margin-top: 0;
+}
+
+#welcome-screen #start-btn {
+    background-color: #007bff;
+    color: black;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 30px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s;
+    width: 305px;
+    margin-top: 50%;
+    position: sticky;
+}
+
+#welcome-screen #start-btn:hover {
+    background-color: #0056b3;
+    color: white;
+}
+
+/* #resume-form, #resume-output {
+    margin-top: 20px;
+} */
+
+#resume-form {
+    margin-top: 20px;
+    background-image: url('https://images.unsplash.com/photo-1605436247078-f0ef43ee8d5c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDEwfGFldTZyTC1qNmV3fHxlbnwwfHx8fHw%3D'); /* Background image for the resume form */
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+#resume-form h2 {
+    color: #007bff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.5);
+    text-transform: uppercase;
+    line-height: 1.1;
+    position: sticky;
+}
+
+form {
+    display: grid;
+    gap: 3px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    margin-bottom: 20px;
+    justify-content: center;
+
+}
+
+fieldset {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding-right: 30px;
+    padding-left: 10px;
+    padding-bottom: 20px;
+    background-color: #fafafa;
+}
+
+#fieldset-skill {
+    grid-column: 1 / span 3;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+}
+
+#skills-container {
+    max-height: 200px; /* Set a fixed height */
+    overflow-y: auto; /* Enable scrolling if content exceeds the height */
+}
+
+legend {
+    font-weight: 600;
+    color: #007bff;
+    font-size: 1.2rem;
+    padding-top: 55px;
+    margin-bottom: 2px;
+    text-transform: uppercase;
+    line-height: 1.1;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    position: relative;
+}
+
+.upload-picture {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.upload-picture img {
+    display: block;
+    margin: 10px auto;
+    max-width: 100px;
+    max-height: 100px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+}
+
+
+
+
+
+#resume-form button {
+    background-color: #007bff;
+    color: black;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    margin-top: 160px ;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s;
+    height: 50px;
+    width: 205px;
+    position: sticky;
+    margin-left: 30px;
+}
+
+#resume-form button:hover {
+    background-color: #0056b3;
+    color: white;
+}
+
+.required {
+    color: red;
+    margin-left: 5px;
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    height: 35px;
+    font-size: medium;
+} 
+
+textarea {
+    resize: vertical;
+    height: 100px;
+    margin-top: 10px;
+}
+#resume-content {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: #fafafa;
+}
+
+#resume-content h2 {
+    margin-top: 0;
+}
+
+#add-skill-btn {
+    position: fixed;
+}
+/* Styling the generated resume */
+#resume-output {
+    text-align: left;
+    padding: 20px;
+    background-color: #242b3f;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#resume-content {
+    text-align: left;
+}
+
+#resume-content h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #007bff;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+#resume-content h4 {
+    font-size: 1.5rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #333;
+    margin-bottom: 50px;
+}
+
+#resume-content p {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+    color: #333;
+
+}
+
+#resume-content img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 20px 0;
+    background-color: #1f1f38;;
+}
+
+#resume-content h3 {
+    font-size: 1.5rem;
+    color: #007bff;
+    margin-bottom: 20px;
+    background-color: #242b3f;
+    padding-left: 5px;
+    border-radius: 4px;
+    height: 40px;
+    display: flex;
+    text-align: center;
+    margin-left: 0px;
+}
+
+.resume-section p {
+    margin-bottom: 5px;
+}
+
+
+.bar {
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+
+.fill {
+    height: 20px;
+    background-color: #007bff;
+    border-radius: 5px;
+}
+
+fieldset {
+    position: relative;
+}
+
+#toggle-skills-btn {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+
+fieldset {
+    position: relative;
+}
+
+.skill {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.skill-label {
+    flex: 1;
+    font-weight: bold;
+}
+
+.bar {
+    width: 40%;
+    height: 10px;
+    background-color: #bdbdbd;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-right: 42%;
+}
+
+.fill {
+    height: 100%;
+    background-color: navy;
+    transition: width 0.3s ease;
+}
+
+
+@media (max-width: 1000px) {
+    .container {
+        width: 70%;
+    }
+}
+
+@media (max-width: 779px) {
+    .container {
+        width: 70%;
+    }
+    #welcome-screen h1 {
+        font-size: 1.5rem;
+        font-weight: lighter;
+        letter-spacing: 0em;
+        margin-bottom: 40px;
+    }
+    #welcome-screen #start-btn {
+        width: 200px;
+        font-size: 1rem;
+        font-weight: lighter;
+    }
+}
+
+@media (max-width: 770px) {
+    #welcome-screen h1 {
+        margin-bottom: 180px;
+    }
+    #welcome-screen #start-btn {
+        margin-top: 200px;
+    }
+}
+
+@media (min-width: 275px) {
+    body {
+        flex-direction: column;
+        margin: 20px 0;
+        height: auto; /* Allow height to adjust dynamically */
+    }
+
+    #resume-form {
+        margin-top: 10px; /* Adjust spacing */
+        padding: 10px; /* Reduce padding */
+    }
+
+    #resume-form h2 {
+        font-size: 1.2rem; /* Adjust font size */
+        margin-bottom: 10px; /* Reduce margin */
+    }
+
+    form {
+        grid-template-columns: 1fr; /* Stack input fields vertically */
+        gap: 15px; /* Adjust gap between fields */
+    }
+
+    input, textarea {
+        font-size: 0.9rem; /* Adjust input font size */
+        height: auto; /* Allow height to adjust */
+        padding: 8px; /* Reduce padding */
+    }
+
+    button {
+        font-size: 0.9rem; /* Adjust button font size */
+        padding: 8px 15px; /* Reduce button padding */
+    }
+}
